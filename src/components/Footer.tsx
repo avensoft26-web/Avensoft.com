@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="relative border-t border-white/[0.05] bg-[#000000] pb-12 pt-20 lg:pt-28 overflow-hidden">
       {/* Decorative background elements */}
-      <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
+      <div className="absolute inset-0 bg-[url('/Avensoft.com/noise.png')] opacity-[0.03] mix-blend-overlay"></div>
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-cyan-900/10 blur-[120px] pointer-events-none rounded-[100%]"></div>
 
       <div className="relative z-10 mx-auto max-w-[85rem] px-6 lg:px-8">
@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Brand info */}
           <div className="md:col-span-12 lg:col-span-5 space-y-6">
             <Link href="/" className="inline-flex items-center group">
-              <img src="/AVENSOFT-dark-theme.png" alt="Avensoft Logo" className="h-20 lg:h-[96px] w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
+              <img src="/Avensoft.com/AVENSOFT-dark-theme.png" alt="Avensoft Logo" className="h-20 lg:h-[96px] w-auto object-contain transition-transform duration-500 group-hover:scale-105" />
             </Link>
 
             <p className="font-body text-sm lg:text-base text-slate-400 max-w-md leading-relaxed">

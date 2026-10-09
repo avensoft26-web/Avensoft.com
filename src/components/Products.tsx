@@ -21,7 +21,7 @@ const products = [
       { label: "Fraud incidents", val: "Zero since launch" },
     ],
     tech: ["Next.js", "Node.js", "PostgreSQL", "QR Auth", "PWA"],
-    img: "/hero-mockup.webp",
+    img: "/Avensoft.com/hero-mockup.webp",
     liveUrl: "https://deepakkumar7388.github.io/SISTec-Digital-Pass/",
     videoUrl: "https://www.youtube.com/watch?v=NrBc7qjgI5Q",
   },
@@ -42,7 +42,7 @@ const products = [
       { label: "Paper registers lost", val: "Zero" },
     ],
     tech: ["React", "Node.js", "MySQL", "ESC/POS Printing", "Offline Sync"],
-    img: "/chc_web_mockup.jpg",
+    img: "/Avensoft.com/chc_web_mockup.jpg",
     liveUrl: "https://deepakkumar7388.github.io/Chaudhary_Health_Care-Center-Koraon-Pryagraj/",
     simulatorUrl: "https://deepakkumar7388.github.io/CHC_Simulator/",
   },
@@ -63,7 +63,7 @@ const products = [
       { label: "Hardware Cost", val: "₹0 (Phone Only)" },
     ],
     tech: ["Android SDK", "Sensor APIs", "GPS & Geofencing", "Text-to-Speech", "Auto-SOS"],
-    img: "/dualshield-mockup.jpg",
+    img: "/Avensoft.com/dualshield-mockup.jpg",
   },
 ];
 

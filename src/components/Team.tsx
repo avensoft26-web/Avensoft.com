@@ -31,42 +31,42 @@ const team = [
     initials: "YS", name: "Yogesh Saini", role: "Lead Developer & Systems Engineer",
     desc: "Directs full-stack application lifecycle and secure multi-role institutional workflows.",
     skills: ["Next.js", "React", "Node.js", "Cloud Deploys"],
-    cat: "backend", hoverBorder: "hover:border-primary-400 hover:shadow-[0_0_35px_rgba(139,92,246,0.35)]", img: "/yogesh.jpeg",
+    cat: "backend", hoverBorder: "hover:border-primary-400 hover:shadow-[0_0_35px_rgba(139,92,246,0.35)]", img: "/Avensoft.com/yogesh.jpeg",
     portfolio: "https://yogeshsaini7172.github.io/yogeshsaini/"
   },
   {
     initials: "SM", name: "Sandeep Kumar Maurya", role: "Lead UI/UX Designer",
     desc: "Designs intuitive user journeys, scalable design systems, and rapid micro-interactions.",
     skills: ["Figma", "UI/UX", "Design Systems", "Prototyping"],
-    cat: "design", hoverBorder: "hover:border-fuchsia-400 hover:shadow-[0_0_35px_rgba(217,70,239,0.35)]", img: "/sandeep.jpeg",
+    cat: "design", hoverBorder: "hover:border-fuchsia-400 hover:shadow-[0_0_35px_rgba(217,70,239,0.35)]", img: "/Avensoft.com/sandeep.jpeg",
     portfolio: "https://www.linkedin.com/in/sandeep-kumar-maurya-63a66130a/?isSelfProfile=false"
   },
   {
     initials: "DK", name: "Deepak Kumar", role: "Backend Developer & Core Architect",
     desc: "Architects scalable backend infrastructure and secure database systems for high-throughput endpoints.",
     skills: ["Node.js", "Express", "PostgreSQL", "System Architecture"],
-    cat: "backend", hoverBorder: "hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(6,182,212,0.35)]", img: "/deepak.jpeg",
+    cat: "backend", hoverBorder: "hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(6,182,212,0.35)]", img: "/Avensoft.com/deepak.jpeg",
     portfolio: "https://deepak-portfolioc.netlify.app/"
   },
   {
     initials: "SM", name: "Shivam Kumar Maurya", role: "UI/UX Designer",
     desc: "Crafts immersive interfaces and user-centric experiences for complex digital workflows.",
     skills: ["Figma", "User Research", "Wireframing", "UI/UX"],
-    cat: "design", hoverBorder: "hover:border-pink-400 hover:shadow-[0_0_35px_rgba(244,114,182,0.35)]", img: "/shivam.jpeg",
+    cat: "design", hoverBorder: "hover:border-pink-400 hover:shadow-[0_0_35px_rgba(244,114,182,0.35)]", img: "/Avensoft.com/shivam.jpeg",
     portfolio: "https://shivam-portfolio-three-pearl.vercel.app/"
   },
   {
     initials: "UM", name: "Utkarsh Mani Mishra", role: "System Tester & QA Lead",
     desc: "Directs edge-case stress testing, load resilience, and QA across web and mobile.",
     skills: ["QA Testing", "Security Audits", "Load Testing", "Field Reliability"],
-    cat: "mobile", hoverBorder: "hover:border-emerald-400 hover:shadow-[0_0_35px_rgba(52,211,153,0.35)]", img: "/utkarsh.jpeg",
+    cat: "mobile", hoverBorder: "hover:border-emerald-400 hover:shadow-[0_0_35px_rgba(52,211,153,0.35)]", img: "/Avensoft.com/utkarsh.jpeg",
     portfolio: "https://www.linkedin.com/in/utkarsh-mani-mishra-98818128a/"
   },
   {
     initials: "AT", name: "Akarsh Tiwari", role: "AI/ML Engineer",
     desc: "Develops robust computer vision models and edge AI systems for real-time inference.",
     skills: ["Python", "TensorFlow", "Computer Vision", "Edge AI"],
-    cat: "ai", hoverBorder: "hover:border-blue-400 hover:shadow-[0_0_35px_rgba(96,165,250,0.35)]", img: "/akarsh.jpeg",
+    cat: "ai", hoverBorder: "hover:border-blue-400 hover:shadow-[0_0_35px_rgba(96,165,250,0.35)]", img: "/Avensoft.com/akarsh.jpeg",
     portfolio: "https://www.linkedin.com/in/akarshtiwari52/?isSelfProfile=false"
   },
 ];
@@ -161,7 +161,7 @@ export default function Team() {
         <div className="divider" />
 
         {/* Deep Cyber grid background */}
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.04] mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-[url('/Avensoft.com/noise.png')] opacity-[0.04] mix-blend-overlay"></div>
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-cyan-900/20 to-transparent blur-[100px] pointer-events-none"></div>
 
         <div className="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6">

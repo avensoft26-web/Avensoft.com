@@ -79,7 +79,7 @@ export default function SplashScreen() {
             className="relative z-10 flex flex-col items-center justify-center px-6"
           >
             <img
-              src="/AVENSOFT-dark-theme.png"
+              src="/Avensoft.com/AVENSOFT-dark-theme.png"
               alt="Avensoft"
               className="h-36 sm:h-44 md:h-52 lg:h-56 w-auto object-contain drop-shadow-[0_0_35px_rgba(245,158,11,0.35)]"
             />
