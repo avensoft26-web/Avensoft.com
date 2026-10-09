@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   description: "Architecting mission-critical software systems across India.",
   icons: {
     icon: [
-      { url: "/favicon-light-sys.png?v=5", media: "(prefers-color-scheme: light)", type: "image/png" },
-      { url: "/favicon.ico?v=5", media: "(prefers-color-scheme: dark)", type: "image/x-icon" },
+      { url: "/Avensoft.com/favicon-light-sys.png?v=5", media: "(prefers-color-scheme: light)", type: "image/png" },
+      { url: "/Avensoft.com/favicon.ico?v=5", media: "(prefers-color-scheme: dark)", type: "image/x-icon" },
     ],
-    apple: "/apple-icon.png?v=2",
+    apple: "/Avensoft.com/apple-icon.png?v=2",
   },
 };
 
