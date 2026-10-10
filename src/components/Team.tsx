@@ -111,13 +111,14 @@ const faqs = [
   },
 ];
 
-export default function Team() {
+export default function Team({ showOnlyTeam = false }: { showOnlyTeam?: boolean } = {}) {
   const [filter, setFilter] = useState("all");
   const [openFaq, setOpenFaq] = useState<number | null>(0);
 
   return (
     <>
       {/* ── TECH STACK ── */}
+      {!showOnlyTeam && (
       <section id="techstack" className="relative bg-[#000000] py-20 lg:py-28 overflow-hidden transition-colors duration-300">
         <div className="divider" />
         <motion.div
@@ -156,6 +157,7 @@ export default function Team() {
           ))}
         </div>
       </section>
+      )}
 
       {/* ── TEAM ── */}
       <section id="team" className="relative bg-[#000000] py-24 lg:py-36 transition-colors duration-300 overflow-hidden">
@@ -243,6 +245,7 @@ export default function Team() {
       </section>
 
       {/* ── FAQ ── */}
+      {!showOnlyTeam && (
       <section id="faq" className="relative bg-[#000000] py-24 lg:py-36 overflow-hidden">
         <div className="divider" />
         {/* Decorative background glow */}
@@ -302,6 +305,7 @@ export default function Team() {
           </div>
         </div>
       </section>
+      )}
     </>
   );
 }

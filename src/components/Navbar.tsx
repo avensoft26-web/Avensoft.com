@@ -26,8 +26,8 @@ const offeringsData: OfferingCategory[] = [
     title: "Mobile App Development",
     subtitle: "Craft High-Performance iOS & Android Apps",
     pageHref: "/services/mobile",
-    color: "text-cyan-400",
-    iconBg: "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20",
+    color: "text-white",
+    iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
     subcategories: [
       { title: "Native Android Engineering", desc: "Kotlin, Jetpack Compose, Coroutines & 120fps UI", href: "/services/mobile" },
@@ -42,8 +42,8 @@ const offeringsData: OfferingCategory[] = [
     title: "Web App Development",
     subtitle: "Fast, Resilient & Scalable Cloud Platforms",
     pageHref: "/services/web",
-    color: "text-cyan-400",
-    iconBg: "bg-cyan-500/10 text-cyan-400 border border-cyan-500/20",
+    color: "text-white",
+    iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
     subcategories: [
       { title: "Next.js & React Portals", desc: "Server Components, App Router & Sub-300ms SLA", href: "/services/web" },
@@ -58,8 +58,8 @@ const offeringsData: OfferingCategory[] = [
     title: "AI & ML Development",
     subtitle: "Edge Vision, Sensor Models & Neural Networks",
     pageHref: "/services/ai",
-    color: "text-amber-300",
-    iconBg: "bg-amber-400/10 text-amber-300 border border-amber-400/20",
+    color: "text-white",
+    iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
     subcategories: [
       { title: "On-Device Edge Neural Networks", desc: "TensorFlow Lite & PyTorch Mobile inference with zero cloud cost", href: "/services/ai" },
@@ -74,8 +74,8 @@ const offeringsData: OfferingCategory[] = [
     title: "Enterprise & Institutional Systems",
     subtitle: "Paperless Governance, Gates & Healthcare ERP",
     pageHref: "/services/enterprise",
-    color: "text-emerald-400",
-    iconBg: "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20",
+    color: "text-white",
+    iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
     subcategories: [
       { title: "Digital Campus Gate Passes", desc: "QR instant verification (<6s) replacing manual paper slips", href: "/services/enterprise" },
@@ -89,8 +89,8 @@ const offeringsData: OfferingCategory[] = [
     title: "UI / UX & Product Design",
     subtitle: "Human-Centric Digital Interfaces & Design Systems",
     pageHref: "/services/design",
-    color: "text-amber-400",
-    iconBg: "bg-amber-500/10 text-amber-400 border border-amber-500/20",
+    color: "text-white",
+    iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01",
     subcategories: [
       { title: "Production Design Systems", desc: "Figma token libraries, reusable components & style guides", href: "/services/design" },
@@ -155,7 +155,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-8 xl:gap-10">
             <Link
               href="/about"
-              className={`font-body text-[15px] font-medium transition-colors duration-200 ${pathname === "/about" ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-white"}`}
+              className={`font-body text-[15px] font-medium transition-colors duration-200 ${pathname === "/about" ? "text-white font-semibold" : "text-slate-300 hover:text-white"}`}
             >
               About us
             </Link>
@@ -168,10 +168,10 @@ export default function Navbar() {
             >
               <button
                 onClick={() => setOfferingsOpen(!offeringsOpen)}
-                className={`font-body text-[15px] font-medium flex items-center gap-1.5 transition-colors duration-200 ${offeringsOpen || pathname.startsWith("/services") ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-white"}`}
+                className={`font-body text-[15px] font-medium flex items-center gap-1.5 transition-colors duration-200 ${offeringsOpen || pathname.startsWith("/services") ? "text-white font-semibold" : "text-slate-300 hover:text-white"}`}
               >
                 <span>Offerings</span>
-                <svg className={`w-3.5 h-3.5 transition-transform duration-300 ${offeringsOpen ? "rotate-180 text-cyan-400" : "text-slate-400"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className={`w-3.5 h-3.5 transition-transform duration-300 ${offeringsOpen ? "rotate-180 text-white" : "text-slate-400"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
@@ -190,7 +190,7 @@ export default function Navbar() {
                       {/* Top Header Label */}
                       <div className="px-6 py-3 border-b border-white/[0.06] bg-white/[0.02] flex items-center justify-between text-xs">
                         <span className="font-heading font-bold uppercase tracking-wider text-slate-400 text-[11px]">Avensoft Engineering Capabilities</span>
-                        <Link href="/services" onClick={() => setOfferingsOpen(false)} className="font-heading font-semibold text-cyan-400 hover:underline">
+                        <Link href="/services" onClick={() => setOfferingsOpen(false)} className="font-heading font-semibold text-white hover:underline">
                           View All Offerings Overview →
                         </Link>
                       </div>
@@ -216,17 +216,14 @@ export default function Navbar() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.8" d={item.icon} />
                                       </svg>
                                     </div>
-                                    <div>
+                                    <div className="flex items-center">
                                       <h4 className={`font-heading font-bold text-[0.95rem] transition-colors ${isSelected ? "text-white" : "text-slate-200 group-hover:text-white"}`}>
                                         {item.title}
                                       </h4>
-                                      <p className="font-body text-xs text-slate-400 line-clamp-1 mt-0.5">
-                                        {item.subtitle}
-                                      </p>
                                     </div>
                                   </div>
 
-                                  <svg className={`w-4 h-4 transition-all duration-200 ${isSelected ? "translate-x-0 opacity-100 text-cyan-400" : "-translate-x-2 opacity-0 text-slate-500 group-hover:opacity-80 group-hover:translate-x-0"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                  <svg className={`w-4 h-4 transition-all duration-200 ${isSelected ? "translate-x-0 opacity-100 text-white" : "-translate-x-2 opacity-0 text-slate-500 group-hover:opacity-80 group-hover:translate-x-0"}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
                                   </svg>
                                 </div>
@@ -236,7 +233,7 @@ export default function Navbar() {
                         </div>
 
                         {/* RIGHT COLUMN: Browse By Category Sub-items */}
-                        <div className="col-span-6 p-6 flex flex-col justify-between bg-[#0e1424]">
+                        <div className="col-span-6 p-6 flex flex-col justify-between bg-[#0a0a0c]">
                           <div>
                             <div className="flex items-center justify-between mb-4 pb-2.5 border-b border-white/[0.06]">
                               <p className="font-heading font-bold text-xs uppercase tracking-wider text-slate-400">
@@ -253,16 +250,11 @@ export default function Navbar() {
                                   key={idx}
                                   href={sub.href}
                                   onClick={() => setOfferingsOpen(false)}
-                                  className="group flex items-start gap-3 p-2.5 rounded-lg hover:bg-white/[0.05] transition-all duration-200"
+                                  className="group flex items-center gap-3 p-2.5 rounded-lg hover:bg-white/[0.05] transition-all duration-200"
                                 >
-                                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-500/50 mt-2 flex-shrink-0 group-hover:bg-cyan-400 group-hover:scale-125 transition-all" />
-                                  <div>
-                                    <div className="font-heading font-semibold text-[0.9rem] text-slate-200 group-hover:text-cyan-400 transition-colors">
-                                      {sub.title}
-                                    </div>
-                                    <p className="font-body text-xs text-slate-400 mt-0.5 leading-snug">
-                                      {sub.desc}
-                                    </p>
+                                  <span className="w-1.5 h-1.5 rounded-full bg-white/20 flex-shrink-0 group-hover:bg-white group-hover:scale-125 transition-all" />
+                                  <div className="font-heading font-semibold text-[0.9rem] text-slate-200 group-hover:text-white transition-colors">
+                                    {sub.title}
                                   </div>
                                 </Link>
                               ))}
@@ -274,7 +266,7 @@ export default function Navbar() {
                             <Link
                               href={selectedCategoryData.pageHref}
                               onClick={() => setOfferingsOpen(false)}
-                              className="font-heading font-bold text-xs text-cyan-400 hover:underline flex items-center gap-1.5"
+                              className="font-heading font-bold text-xs text-white hover:underline flex items-center gap-1.5"
                             >
                               Open {selectedCategoryData.title} Page
                               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
@@ -283,26 +275,7 @@ export default function Navbar() {
                         </div>
                       </div>
 
-                      {/* BOTTOM PERSISTENT CTA BANNER */}
-                      <div className="px-6 py-4 border-t border-white/[0.08] bg-gradient-to-r from-[#000000] via-[#050505] to-[#000000] flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <span className="flex h-2.5 w-2.5 relative">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                            <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-                          </span>
-                          <div>
-                            <span className="font-heading font-bold text-sm text-white">Ready to get started?</span>
-                            <span className="font-body text-xs text-slate-400 ml-2 hidden sm:inline">Turn high-complexity requirements into robust production code.</span>
-                          </div>
-                        </div>
-                        <Link
-                          href="/contact"
-                          onClick={() => setOfferingsOpen(false)}
-                          className="px-4 py-2 rounded-xl text-xs font-heading font-bold bg-gradient-to-r from-[#00f0ff] via-[#38bdf8] to-[#fde047] text-slate-950 hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] hover:scale-105 transition-all shadow-sm"
-                        >
-                          Book Architecture Call →
-                        </Link>
-                      </div>
+
                     </div>
                   </motion.div>
                 )}
@@ -311,14 +284,14 @@ export default function Navbar() {
 
             <Link
               href="/portfolio"
-              className={`font-body text-[15px] font-medium transition-colors duration-200 ${pathname === "/portfolio" ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-white"}`}
+              className={`font-body text-[15px] font-medium transition-colors duration-200 ${pathname === "/portfolio" ? "text-white font-semibold" : "text-slate-300 hover:text-white"}`}
             >
               Our Work
             </Link>
 
             <Link
               href="/services"
-              className={`font-body text-[15px] font-medium transition-colors duration-200 ${pathname === "/services" ? "text-cyan-400 font-semibold" : "text-slate-300 hover:text-white"}`}
+              className={`font-body text-[15px] font-medium transition-colors duration-200 ${pathname === "/services" ? "text-white font-semibold" : "text-slate-300 hover:text-white"}`}
             >
               Capabilities
             </Link>
@@ -332,7 +305,7 @@ export default function Navbar() {
             {/* CTA Button */}
             <Link
               href="/contact"
-              className="hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-heading font-bold text-sm text-slate-950 bg-gradient-to-r from-[#00f0ff] via-[#38bdf8] to-[#fde047] hover:shadow-[0_0_25px_rgba(0,240,255,0.5)] hover:scale-105 transition-all duration-300"
+              className="hidden sm:inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl font-heading font-bold text-sm text-slate-950 bg-white hover:bg-gray-200 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:scale-105 transition-all duration-300"
             >
               Contact us
             </Link>
@@ -364,7 +337,7 @@ export default function Navbar() {
                 <Link
                   href="/"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/" ? "text-cyan-400" : "text-slate-200"}`}
+                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/" ? "text-white" : "text-slate-200"}`}
                 >
                   Home
                 </Link>
@@ -372,7 +345,7 @@ export default function Navbar() {
                 <Link
                   href="/about"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/about" ? "text-cyan-400" : "text-slate-200"}`}
+                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/about" ? "text-white" : "text-slate-200"}`}
                 >
                   About us
                 </Link>
@@ -392,7 +365,7 @@ export default function Navbar() {
                       className="p-1 rounded-md hover:bg-white/10"
                       aria-label="Expand offerings subpages"
                     >
-                      <svg className={`w-4 h-4 transition-transform duration-300 ${mobileOfferingsOpen ? "rotate-180 text-cyan-400" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className={`w-4 h-4 transition-transform duration-300 ${mobileOfferingsOpen ? "rotate-180 text-white" : ""}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
@@ -431,7 +404,7 @@ export default function Navbar() {
                 <Link
                   href="/portfolio"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/portfolio" ? "text-cyan-400" : "text-slate-200"}`}
+                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/portfolio" ? "text-white" : "text-slate-200"}`}
                 >
                   Our Work (Portfolio)
                 </Link>
@@ -439,7 +412,7 @@ export default function Navbar() {
                 <Link
                   href="/services"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/services" ? "text-cyan-400" : "text-slate-200"}`}
+                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/services" ? "text-white" : "text-slate-200"}`}
                 >
                   Capabilities
                 </Link>
@@ -447,7 +420,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setMenuOpen(false)}
-                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/contact" ? "text-cyan-400" : "text-slate-200"}`}
+                  className={`block py-2 font-heading font-semibold text-base transition-colors ${pathname === "/contact" ? "text-white" : "text-slate-200"}`}
                 >
                   Contact
                 </Link>
@@ -456,7 +429,7 @@ export default function Navbar() {
                   <Link
                     href="/contact"
                     onClick={() => setMenuOpen(false)}
-                    className="btn-primary w-full text-center"
+                    className="block w-full text-center px-6 py-2.5 rounded-xl font-heading font-bold text-sm text-slate-950 bg-white hover:bg-gray-200 transition-all duration-300"
                   >
                     Start a Project
                   </Link>

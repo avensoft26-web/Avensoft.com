@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import Team from "@/components/Team";
+import AboutJourney from "@/components/AboutJourney";
 
 export const metadata: Metadata = {
-  title: "About Us — Engineering Team & Leadership",
-  description: "Meet the engineers, architects, and designers building mission-critical software systems at Avensoft Technologies.",
+  title: "Our Journey & Story — From College Roots to Enterprise Systems",
+  description: "Discover the journey of Avensoft Technologies — how engineering students from SISTec Bhopal built mission-critical software for campuses, hospitals, and enterprises.",
 };
 
 export default function AboutPage() {
   return (
-    <div className="pt-20">
-      <Team />
-    </div>
+    <main>
+      <AboutJourney />
+    </main>
   );
 }
