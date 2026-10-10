@@ -105,7 +105,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
   const [menuOpen, setMenuOpen] = useState(false);
-    const [offeringsOpen, setOfferingsOpen] = useState(false);
+  const [offeringsOpen, setOfferingsOpen] = useState(false);
   const [mobileOfferingsOpen, setMobileOfferingsOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState<string>("mobile");
 
