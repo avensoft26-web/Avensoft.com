@@ -121,7 +121,7 @@ export default function AIServicesPage() {
       <section className="py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 max-w-2xl">
-            <span className="font-body text-xs font-bold tracking-widest uppercase text-fuchsia-600 dark:text-fuchsia-400">Deep-Tech Arsenal</span>
+            <span className="font-body text-xs font-bold tracking-widest uppercase text-fuchsia-600 dark:text-fuchsia-400">Technology Arsenal</span>
             <h2 className="section-title mt-2">
               Edge Intelligence & <span className="grad-text">Applied Vision.</span>
             </h2>

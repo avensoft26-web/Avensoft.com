@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/basePath";
 
 const capabilities = [
   {
@@ -206,7 +207,7 @@ export default function MobileServicesPage() {
 
             <div className="lg:col-span-6 flex justify-center">
               <div className="relative p-6 rounded-3xl bg-gradient-to-br from-cyan-500/10 via-primary-500/10 to-transparent border border-slate-200 dark:border-white/10 shadow-2xl">
-                <Image src="/Avensoft.com/app-mockup.jpg" alt="Healthcare App Mockup" width={320} height={450} className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-500" />
+                <Image src={assetPath("/app-mockup.jpg")} alt="Healthcare App Mockup" width={320} height={450} className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.4)] hover:scale-105 transition-transform duration-500" />
               </div>
             </div>
           </div>

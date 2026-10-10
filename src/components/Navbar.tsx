@@ -3,6 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetPath } from "@/lib/basePath";
 
 interface OfferingCategory {
   id: string;
@@ -147,7 +148,7 @@ export default function Navbar() {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:py-2.5">
 
           <Link href="/" className="group flex items-center">
-            <img src="/Avensoft.com/AVENSOFT-dark-theme.png" alt="Avensoft Logo" className="h-10 lg:h-12 w-auto object-contain scale-[1.35] lg:scale-[1.4] origin-left transition-transform duration-300 group-hover:scale-[1.45]" />
+            <img src={assetPath("/AVENSOFT-dark-theme.png")} alt="Avensoft Logo" className="h-10 lg:h-12 w-auto object-contain scale-[1.35] lg:scale-[1.4] origin-left transition-transform duration-300 group-hover:scale-[1.45]" />
           </Link>
 
           {/* Clean Enterprise Desktop Nav Links (Matching Kody's exact layout) */}
@@ -269,7 +270,7 @@ export default function Navbar() {
                           </div>
 
                           <div className="pt-4 mt-4 border-t border-white/[0.06] flex items-center justify-between">
-                            <span className="font-body text-xs text-slate-400">Deep Technical Blueprint</span>
+                            <span className="font-body text-xs text-slate-400">Technology Blueprint</span>
                             <Link
                               href={selectedCategoryData.pageHref}
                               onClick={() => setOfferingsOpen(false)}

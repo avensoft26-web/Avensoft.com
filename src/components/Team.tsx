@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { assetPath } from "@/lib/basePath";
 
 const techStack = [
   { name: "Next.js", cat: "Web" }, { name: "React", cat: "Web" },
@@ -31,42 +32,42 @@ const team = [
     initials: "YS", name: "Yogesh Saini", role: "Lead Developer & Systems Engineer",
     desc: "Directs full-stack application lifecycle and secure multi-role institutional workflows.",
     skills: ["Next.js", "React", "Node.js", "Cloud Deploys"],
-    cat: "backend", hoverBorder: "hover:border-primary-400 hover:shadow-[0_0_35px_rgba(139,92,246,0.35)]", img: "/Avensoft.com/yogesh.jpeg",
+    cat: "backend", hoverBorder: "hover:border-primary-400 hover:shadow-[0_0_35px_rgba(139,92,246,0.35)]", img: assetPath("/yogesh.jpeg"),
     portfolio: "https://yogeshsaini7172.github.io/yogeshsaini/"
   },
   {
     initials: "SM", name: "Sandeep Kumar Maurya", role: "Lead UI/UX Designer",
     desc: "Designs intuitive user journeys, scalable design systems, and rapid micro-interactions.",
     skills: ["Figma", "UI/UX", "Design Systems", "Prototyping"],
-    cat: "design", hoverBorder: "hover:border-fuchsia-400 hover:shadow-[0_0_35px_rgba(217,70,239,0.35)]", img: "/Avensoft.com/sandeep.jpeg",
+    cat: "design", hoverBorder: "hover:border-fuchsia-400 hover:shadow-[0_0_35px_rgba(217,70,239,0.35)]", img: assetPath("/sandeep.jpeg"),
     portfolio: "https://www.linkedin.com/in/sandeep-kumar-maurya-63a66130a/?isSelfProfile=false"
   },
   {
     initials: "DK", name: "Deepak Kumar", role: "Backend Developer & Core Architect",
     desc: "Architects scalable backend infrastructure and secure database systems for high-throughput endpoints.",
     skills: ["Node.js", "Express", "PostgreSQL", "System Architecture"],
-    cat: "backend", hoverBorder: "hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(6,182,212,0.35)]", img: "/Avensoft.com/deepak.jpeg",
+    cat: "backend", hoverBorder: "hover:border-cyan-400 hover:shadow-[0_0_35px_rgba(6,182,212,0.35)]", img: assetPath("/deepak.jpeg"),
     portfolio: "https://deepak-portfolioc.netlify.app/"
   },
   {
     initials: "SM", name: "Shivam Kumar Maurya", role: "UI/UX Designer",
     desc: "Crafts immersive interfaces and user-centric experiences for complex digital workflows.",
     skills: ["Figma", "User Research", "Wireframing", "UI/UX"],
-    cat: "design", hoverBorder: "hover:border-pink-400 hover:shadow-[0_0_35px_rgba(244,114,182,0.35)]", img: "/Avensoft.com/shivam.jpeg",
+    cat: "design", hoverBorder: "hover:border-pink-400 hover:shadow-[0_0_35px_rgba(244,114,182,0.35)]", img: assetPath("/shivam.jpeg"),
     portfolio: "https://shivam-portfolio-three-pearl.vercel.app/"
   },
   {
     initials: "UM", name: "Utkarsh Mani Mishra", role: "System Tester & QA Lead",
     desc: "Directs edge-case stress testing, load resilience, and QA across web and mobile.",
     skills: ["QA Testing", "Security Audits", "Load Testing", "Field Reliability"],
-    cat: "mobile", hoverBorder: "hover:border-emerald-400 hover:shadow-[0_0_35px_rgba(52,211,153,0.35)]", img: "/Avensoft.com/utkarsh.jpeg",
+    cat: "mobile", hoverBorder: "hover:border-emerald-400 hover:shadow-[0_0_35px_rgba(52,211,153,0.35)]", img: assetPath("/utkarsh.jpeg"),
     portfolio: "https://www.linkedin.com/in/utkarsh-mani-mishra-98818128a/"
   },
   {
     initials: "AT", name: "Akarsh Tiwari", role: "AI/ML Engineer",
     desc: "Develops robust computer vision models and edge AI systems for real-time inference.",
     skills: ["Python", "TensorFlow", "Computer Vision", "Edge AI"],
-    cat: "ai", hoverBorder: "hover:border-blue-400 hover:shadow-[0_0_35px_rgba(96,165,250,0.35)]", img: "/Avensoft.com/akarsh.jpeg",
+    cat: "ai", hoverBorder: "hover:border-blue-400 hover:shadow-[0_0_35px_rgba(96,165,250,0.35)]", img: assetPath("/akarsh.jpeg"),
     portfolio: "https://www.linkedin.com/in/akarshtiwari52/?isSelfProfile=false"
   },
 ];
@@ -161,7 +162,7 @@ export default function Team() {
         <div className="divider" />
 
         {/* Deep Cyber grid background */}
-        <div className="absolute inset-0 bg-[url('/Avensoft.com/noise.png')] opacity-[0.04] mix-blend-overlay"></div>
+        <div className="absolute inset-0 opacity-[0.04] mix-blend-overlay" style={{ backgroundImage: `url(${assetPath("/noise.png")})` }}></div>
         <div className="absolute top-0 inset-x-0 h-[500px] bg-gradient-to-b from-cyan-900/20 to-transparent blur-[100px] pointer-events-none"></div>
 
         <div className="relative z-10 mx-auto max-w-[90rem] px-4 sm:px-6">
@@ -182,28 +183,28 @@ export default function Team() {
             {team.map((m) => (
               <div
                 key={m.name}
-                className="group relative w-full h-[450px] lg:h-auto lg:flex-1 lg:hover:flex-[2.5] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-xl bg-slate-900 border border-white/10 lg:hover:border-cyan-500/50 cursor-pointer shadow-2xl lg:hover:shadow-[0_0_40px_rgba(6,182,212,0.2)]"
+                className="group relative w-full h-[450px] lg:h-auto lg:flex-1 lg:hover:flex-[2.5] transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden rounded-xl bg-[#0c0c0e] border border-white/10 lg:hover:border-white/30 cursor-pointer shadow-2xl lg:hover:shadow-[0_0_40px_rgba(255,255,255,0.1)]"
               >
-                {/* Background Image */}
+                {/* Background Image: Mobile = 100% Original Colors; Desktop = Studio B&W by default, revealing Original Color on hover */}
                 <img
                   src={m.img}
                   alt={m.name}
-                  className="absolute inset-0 w-full h-full object-cover object-[center_top] grayscale-0 opacity-100 mix-blend-normal lg:grayscale lg:opacity-40 lg:mix-blend-luminosity lg:group-hover:grayscale-0 lg:group-hover:opacity-100 lg:group-hover:mix-blend-normal transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
+                  className="absolute inset-0 w-full h-full object-cover object-[center_top] filter grayscale-0 contrast-100 brightness-100 lg:grayscale lg:contrast-[1.18] lg:brightness-[0.92] lg:group-hover:grayscale-0 lg:group-hover:contrast-100 lg:group-hover:brightness-100 lg:group-hover:scale-105 transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]"
                 />
 
-                {/* Overlay Gradients */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-90 lg:opacity-90 lg:group-hover:opacity-80 transition-opacity duration-700"></div>
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700"></div>
+                {/* Subtle bottom shadow vignette for readable text */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent opacity-85 lg:group-hover:opacity-65 transition-opacity duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
                 {/* Content Container */}
                 <div className="absolute inset-0 p-6 lg:p-8 flex flex-col justify-end">
 
                   {/* Default State (Shrunken) - Vertical Text (Desktop only) */}
                   <div className="absolute inset-x-0 bottom-10 hidden lg:flex flex-col items-center justify-end gap-4 transition-all duration-700 group-hover:opacity-0 group-hover:-translate-y-8 pointer-events-none">
-                    <h3 className="font-heading font-black text-lg text-white tracking-widest whitespace-nowrap [writing-mode:vertical-rl] rotate-180">
+                    <h3 className="font-heading font-black text-lg text-white tracking-widest whitespace-nowrap [writing-mode:vertical-rl] rotate-180 drop-shadow-md">
                       {m.name.split(' ')[0]}
                     </h3>
-                    <span className="flex h-9 w-9 shrink-0 text-xs rounded-full border border-white/20 bg-black/50 backdrop-blur-md items-center justify-center font-heading font-bold text-white relative z-10">
+                    <span className="flex h-9 w-9 shrink-0 text-xs rounded-full border border-white/20 bg-black/60 backdrop-blur-md items-center justify-center font-heading font-bold text-white relative z-10 shadow-lg">
                       {m.initials}
                     </span>
                   </div>
@@ -211,14 +212,14 @@ export default function Team() {
                   {/* Expanded State (Hovered on Desktop / Always on Mobile) - Full Info */}
                   <div className="relative z-10 w-full lg:w-[420px] max-w-full opacity-100 lg:opacity-0 translate-y-0 lg:translate-y-10 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-700 delay-100 ease-[cubic-bezier(0.25,1,0.5,1)]">
                     <div className="flex items-center gap-2 mb-3 lg:mb-4">
-                      <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)] animate-pulse" />
-                      <span className="font-mono text-[0.65rem] lg:text-[0.7rem] font-bold uppercase tracking-widest text-cyan-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-amber-400 shadow-[0_0_8px_rgba(251,191,36,0.8)] animate-pulse" />
+                      <span className="font-mono text-[0.65rem] lg:text-[0.7rem] font-bold uppercase tracking-widest text-amber-300">
                         {m.role}
                       </span>
                     </div>
                     <h3 className="font-heading font-black text-lg lg:text-xl text-white mb-5 drop-shadow-xl">{m.name}</h3>
                     {m.portfolio && (
-                      <a href={m.portfolio} target="_blank" rel="noopener noreferrer" className="inline-flex items-center w-max gap-2 px-4 py-1.5 lg:px-5 lg:py-2 rounded-full font-heading font-bold text-[0.65rem] lg:text-xs text-slate-900 bg-white hover:bg-cyan-400 hover:text-slate-900 hover:scale-105 transition-all duration-300">
+                      <a href={m.portfolio} target="_blank" rel="noopener noreferrer" className="inline-flex items-center w-max gap-2 px-4 py-1.5 lg:px-5 lg:py-2 rounded-full font-heading font-bold text-[0.65rem] lg:text-xs text-slate-900 bg-white hover:bg-amber-400 hover:text-slate-900 hover:scale-105 transition-all duration-300">
                         View Portfolio
                         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
                       </a>

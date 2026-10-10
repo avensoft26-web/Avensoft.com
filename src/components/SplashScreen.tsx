@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { assetPath } from "@/lib/basePath";
 
 export default function SplashScreen() {
   const [isVisible, setIsVisible] = useState<boolean>(true);
@@ -12,13 +13,13 @@ export default function SplashScreen() {
       document.body.style.overflow = "hidden";
     }
 
-    // Exactly 4 seconds display
+    // 2.2 seconds display for punchy, fast feel on any network
     const timer = setTimeout(() => {
       setIsVisible(false);
       if (typeof window !== "undefined") {
         document.body.style.overflow = "";
       }
-    }, 4000);
+    }, 2200);
 
     // Escape key listener to dismiss early if needed
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -73,13 +74,13 @@ export default function SplashScreen() {
               opacity: 1,
             }}
             transition={{
-              scale: { duration: 4.0, ease: "easeOut" },
-              opacity: { duration: 0.8, ease: "easeOut" },
+              scale: { duration: 2.2, ease: "easeOut" },
+              opacity: { duration: 0.6, ease: "easeOut" },
             }}
             className="relative z-10 flex flex-col items-center justify-center px-6"
           >
             <img
-              src="/Avensoft.com/AVENSOFT-dark-theme.png"
+              src={assetPath("/AVENSOFT-dark-theme.png")}
               alt="Avensoft"
               className="h-36 sm:h-44 md:h-52 lg:h-56 w-auto object-contain drop-shadow-[0_0_35px_rgba(245,158,11,0.35)]"
             />

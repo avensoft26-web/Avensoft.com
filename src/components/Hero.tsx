@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { assetPath } from "@/lib/basePath";
 
 const techTickerItems = [
   { label: "Next.js 15", cat: "Web", icon: "⚡" },
@@ -28,7 +29,7 @@ export default function Hero() {
     <div className="relative overflow-hidden bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
       
       {/* ══════════════════════════════════════
-          SECTION 1 — CINEMATIC DEEP-TECH HERO
+          SECTION 1 — CINEMATIC TECHNOLOGIES HERO
       ══════════════════════════════════════ */}
       <section id="top" className="relative min-h-screen flex flex-col justify-between pt-32 pb-16 overflow-hidden">
 
@@ -106,7 +107,7 @@ export default function Hero() {
               </div>
             </motion.div>
 
-            {/* RIGHT COLUMN: Interactive Deep-Tech Telematics & Radar Card */}
+            {/* RIGHT COLUMN: Interactive Telematics & Radar Card */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -120,7 +121,7 @@ export default function Hero() {
                 <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden border border-neutral-200 dark:border-white/10 shadow-lg">
                   {/* Dark Theme Real-World Image */}
                   <Image 
-                    src="/Avensoft.com/hero-engineering-real.jpg" 
+                    src={assetPath("/hero-engineering-real.jpg")} 
                     alt="Avensoft Ground Engineering & Telematics Lab" 
                     fill 
                     priority 
@@ -128,8 +129,8 @@ export default function Hero() {
                   />
                   {/* Light Theme Real-World Image */}
                   <Image 
-                    src="/Avensoft.com/hero-engineering-light.jpg" 
-                    alt="Avensoft Daylight Engineering Studio" 
+                    src={assetPath("/hero-engineering-light.jpg")} 
+                    alt="Avensoft Technologies Studio" 
                     fill 
                     priority 
                     className="block dark:hidden object-cover object-center group-hover:scale-105 transition-transform duration-700" 
@@ -259,7 +260,7 @@ export default function Hero() {
               className="md:col-span-7 rounded-3xl overflow-hidden relative min-h-[480px] bg-gradient-to-b from-[#242732] via-[#1a1c24] to-[#111218] border border-white/[0.18] border-t-white/40 shadow-[inset_0_2px_1px_rgba(255,255,255,0.25),inset_0_-2px_2px_rgba(0,0,0,0.8),0_24px_50px_-10px_rgba(0,0,0,0.95)] hover:shadow-[inset_0_2px_1px_rgba(255,255,255,0.35),0_32px_64px_-12px_rgba(0,0,0,1)] hover:border-white/30 hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between"
             >
               {/* Cinematic Background Image */}
-              <Image src="/Avensoft.com/bento-about.jpg" alt="Avensoft Mission Control & Systems Architecture" fill className="object-cover object-center opacity-85 transition-transform duration-700 group-hover:scale-105" />
+              <Image src={assetPath("/bento-about.jpg")} alt="Avensoft Mission Control & Systems Architecture" fill className="object-cover object-center opacity-85 transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0e0f14] via-[#0e0f14]/50 to-transparent pointer-events-none" />
 
               {/* Floating Top Telemetry Bar */}
@@ -363,7 +364,7 @@ export default function Hero() {
               <div className="relative z-10 p-5 pb-0 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="relative w-6 h-6 rounded-md overflow-hidden border border-white/20 shadow-sm flex-shrink-0">
-                    <Image src="/Avensoft.com/sistec-logo.jpeg" alt="SISTec Logo" fill className="object-cover" />
+                    <Image src={assetPath("/sistec-logo.jpeg")} alt="SISTec Logo" fill className="object-cover" />
                   </div>
                   <span className="px-3 py-1 rounded-full text-[11px] font-heading font-bold bg-emerald-500/15 border border-emerald-400/35 text-emerald-400 flex items-center gap-1.5 shadow-sm">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -376,7 +377,7 @@ export default function Hero() {
               {/* 3D App Display Window */}
               <div className="relative w-full h-[270px] sm:h-[300px] my-auto flex items-center justify-center overflow-hidden px-4">
                 <Image 
-                  src="/Avensoft.com/hero-mockup.webp" 
+                  src={assetPath("/hero-mockup.webp")} 
                   alt="SISTec Digital Pass System Mockup" 
                   fill 
                   className="object-contain object-center drop-shadow-[0_20px_35px_rgba(0,0,0,0.95)] transition-transform duration-700 group-hover:scale-105" 

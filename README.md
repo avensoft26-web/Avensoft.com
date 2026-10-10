@@ -1,6 +1,6 @@
 # Avensoft.com
 
-**Avensoft** is a premier Deep-Tech Engineering Studio based in India, specializing in mission-critical software systems, enterprise architecture, and robust AI integrations. 
+**Avensoft Technologies** is a modern software and cloud technologies firm based in India, specializing in mission-critical software systems, enterprise architecture, and robust AI integrations. 
 
 This repository contains the source code for the official Avensoft landing page and portfolio, built with modern web technologies to ensure maximum performance, security, and a premium user experience.
 

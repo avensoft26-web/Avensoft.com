@@ -1,8 +1,16 @@
 import type { NextConfig } from "next";
 
+const isDev = process.env.NODE_ENV === "development";
+
+const basePath = isDev
+  ? ""
+  : (process.env.NEXT_PUBLIC_BASE_PATH !== undefined
+      ? process.env.NEXT_PUBLIC_BASE_PATH
+      : "/Avensoft.com");
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/Avensoft.com",
+  ...(basePath ? { basePath } : {}),
   images: {
     unoptimized: true,
   },
