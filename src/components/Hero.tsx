@@ -28,133 +28,133 @@ export default function Hero() {
   });
 
   // Smooth out the scroll progress for premium feel
-  const smoothProgress = useSpring(scrollYProgress, { damping: 20, stiffness: 80, mass: 0.5 });
+  const smoothProgress = useSpring(scrollYProgress, { damping: 25, stiffness: 100, mass: 0.4 });
 
-  // --- TECH TREE SHATTER TRANSFORMS (Phase 1) ---
-  const treeOpacity = useTransform(smoothProgress, [0.25, 0.35], [1, 0]);
-  const treeScale = useTransform(smoothProgress, [0, 0.35], [1, 1.8]);
-  const treeBlur = useTransform(smoothProgress, [0.25, 0.35], ["blur(0px)", "blur(12px)"]);
+  // --- TECH TREE SHATTER TRANSFORMS (Phase 1: 0 to 0.22) ---
+  const treeOpacity = useTransform(smoothProgress, [0.16, 0.24], [1, 0]);
+  const treeScale = useTransform(smoothProgress, [0, 0.24], [1, 1.8]);
+  const treeBlur = useTransform(smoothProgress, [0.16, 0.24], ["blur(0px)", "blur(12px)"]);
 
-  const snakeLength = useTransform(smoothProgress, [0, 0.35], [1, 0.4]);
+  const snakeLength = useTransform(smoothProgress, [0, 0.24], [1, 0.4]);
 
   // Nodes flying out in the exact direction of their final path segment
   // Left
-  const b1X = useTransform(smoothProgress, [0, 0.35], ["0vw", "-120vw"]);
-  const b1Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "0vh"]);
+  const b1X = useTransform(smoothProgress, [0, 0.24], ["0vw", "-120vw"]);
+  const b1Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "0vh"]);
 
   // Up-Left
-  const b2X = useTransform(smoothProgress, [0, 0.35], ["0vw", "-80vw"]);
-  const b2Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-120vh"]);
+  const b2X = useTransform(smoothProgress, [0, 0.24], ["0vw", "-80vw"]);
+  const b2Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-120vh"]);
 
   // Up
-  const b3X = useTransform(smoothProgress, [0, 0.35], ["0vw", "0vw"]);
-  const b3Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-150vh"]);
+  const b3X = useTransform(smoothProgress, [0, 0.24], ["0vw", "0vw"]);
+  const b3Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-150vh"]);
 
   // Left
-  const b4X = useTransform(smoothProgress, [0, 0.35], ["0vw", "-150vw"]);
-  const b4Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "10vh"]);
+  const b4X = useTransform(smoothProgress, [0, 0.24], ["0vw", "-150vw"]);
+  const b4Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "10vh"]);
 
   // Up
-  const b5X = useTransform(smoothProgress, [0, 0.35], ["0vw", "-10vw"]);
-  const b5Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-150vh"]);
+  const b5X = useTransform(smoothProgress, [0, 0.24], ["0vw", "-10vw"]);
+  const b5Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-150vh"]);
 
   // Up-Left
-  const b6X = useTransform(smoothProgress, [0, 0.35], ["0vw", "-100vw"]);
-  const b6Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-100vh"]);
+  const b6X = useTransform(smoothProgress, [0, 0.24], ["0vw", "-100vw"]);
+  const b6Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-100vh"]);
 
   // Up-Right
-  const b7X = useTransform(smoothProgress, [0, 0.35], ["0vw", "80vw"]);
-  const b7Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-120vh"]);
+  const b7X = useTransform(smoothProgress, [0, 0.24], ["0vw", "80vw"]);
+  const b7Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-120vh"]);
 
   // Right
-  const b8X = useTransform(smoothProgress, [0, 0.35], ["0vw", "150vw"]);
-  const b8Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "20vh"]);
+  const b8X = useTransform(smoothProgress, [0, 0.24], ["0vw", "150vw"]);
+  const b8Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "20vh"]);
 
   // Up-Right
-  const b9X = useTransform(smoothProgress, [0, 0.35], ["0vw", "120vw"]);
-  const b9Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-100vh"]);
+  const b9X = useTransform(smoothProgress, [0, 0.24], ["0vw", "120vw"]);
+  const b9Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-100vh"]);
 
   // Up
-  const b10X = useTransform(smoothProgress, [0, 0.35], ["0vw", "20vw"]);
-  const b10Y = useTransform(smoothProgress, [0, 0.35], ["0vh", "-150vh"]);
+  const b10X = useTransform(smoothProgress, [0, 0.24], ["0vw", "20vw"]);
+  const b10Y = useTransform(smoothProgress, [0, 0.24], ["0vh", "-150vh"]);
 
   // --- AVENSOFT SHATTER TRANSFORMS ---
-  const stoneOpacity = useTransform(smoothProgress, [0, 0.3], [1, 0]);
+  const stoneOpacity = useTransform(smoothProgress, [0, 0.20], [1, 0]);
 
-  const aX = useTransform(smoothProgress, [0, 0.35], [0, -200]);
-  const aY = useTransform(smoothProgress, [0, 0.35], [0, 300]);
-  const aR = useTransform(smoothProgress, [0, 0.35], [0, -60]);
+  const aX = useTransform(smoothProgress, [0, 0.24], [0, -200]);
+  const aY = useTransform(smoothProgress, [0, 0.24], [0, 300]);
+  const aR = useTransform(smoothProgress, [0, 0.24], [0, -60]);
 
-  const vX = useTransform(smoothProgress, [0, 0.35], [0, -120]);
-  const vY = useTransform(smoothProgress, [0, 0.35], [0, 380]);
-  const vR = useTransform(smoothProgress, [0, 0.35], [0, -35]);
+  const vX = useTransform(smoothProgress, [0, 0.24], [0, -120]);
+  const vY = useTransform(smoothProgress, [0, 0.24], [0, 380]);
+  const vR = useTransform(smoothProgress, [0, 0.24], [0, -35]);
 
-  const eX = useTransform(smoothProgress, [0, 0.35], [0, -40]);
-  const eY = useTransform(smoothProgress, [0, 0.35], [0, 420]);
-  const eR = useTransform(smoothProgress, [0, 0.35], [0, 20]);
+  const eX = useTransform(smoothProgress, [0, 0.24], [0, -40]);
+  const eY = useTransform(smoothProgress, [0, 0.24], [0, 420]);
+  const eR = useTransform(smoothProgress, [0, 0.24], [0, 20]);
 
-  const nX = useTransform(smoothProgress, [0, 0.35], [0, 20]);
-  const nY = useTransform(smoothProgress, [0, 0.35], [0, 450]);
-  const nR = useTransform(smoothProgress, [0, 0.35], [0, -10]);
+  const nX = useTransform(smoothProgress, [0, 0.24], [0, 20]);
+  const nY = useTransform(smoothProgress, [0, 0.24], [0, 450]);
+  const nR = useTransform(smoothProgress, [0, 0.24], [0, -10]);
 
-  const sX = useTransform(smoothProgress, [0, 0.35], [0, 90]);
-  const sY = useTransform(smoothProgress, [0, 0.35], [0, 390]);
-  const sR = useTransform(smoothProgress, [0, 0.35], [0, 50]);
+  const sX = useTransform(smoothProgress, [0, 0.24], [0, 90]);
+  const sY = useTransform(smoothProgress, [0, 0.24], [0, 390]);
+  const sR = useTransform(smoothProgress, [0, 0.24], [0, 50]);
 
-  const oX = useTransform(smoothProgress, [0, 0.35], [0, 160]);
-  const oY = useTransform(smoothProgress, [0, 0.35], [0, 460]);
-  const oR = useTransform(smoothProgress, [0, 0.35], [0, -45]);
+  const oX = useTransform(smoothProgress, [0, 0.24], [0, 160]);
+  const oY = useTransform(smoothProgress, [0, 0.24], [0, 460]);
+  const oR = useTransform(smoothProgress, [0, 0.24], [0, -45]);
 
-  const fX = useTransform(smoothProgress, [0, 0.35], [0, 240]);
-  const fY = useTransform(smoothProgress, [0, 0.35], [0, 310]);
-  const fR = useTransform(smoothProgress, [0, 0.35], [0, 80]);
+  const fX = useTransform(smoothProgress, [0, 0.24], [0, 240]);
+  const fY = useTransform(smoothProgress, [0, 0.24], [0, 310]);
+  const fR = useTransform(smoothProgress, [0, 0.24], [0, 80]);
 
-  const tX = useTransform(smoothProgress, [0, 0.35], [0, 350]);
-  const tY = useTransform(smoothProgress, [0, 0.35], [0, 380]);
-  const tR = useTransform(smoothProgress, [0, 0.35], [0, 120]);
+  const tX = useTransform(smoothProgress, [0, 0.24], [0, 350]);
+  const tY = useTransform(smoothProgress, [0, 0.24], [0, 380]);
+  const tR = useTransform(smoothProgress, [0, 0.24], [0, 120]);
 
-  // --- ASSEMBLY TRANSFORMS (Phase 2) ---
+  // --- ASSEMBLY TRANSFORMS (Phase 2: 0.16 to 0.40, then HOLD until 0.85) ---
   // Left Column
-  const badgeY = useTransform(smoothProgress, [0.15, 0.6], ["-100px", "0px"]);
-  const badgeOpacity = useTransform(smoothProgress, [0.15, 0.5], [0, 1]);
+  const badgeY = useTransform(smoothProgress, [0.16, 0.38], ["-30px", "0px"]);
+  const badgeOpacity = useTransform(smoothProgress, [0.16, 0.35], [0, 1]);
 
-  const titleX = useTransform(smoothProgress, [0.15, 0.6], ["-20vw", "0vw"]);
-  const titleY = useTransform(smoothProgress, [0.15, 0.6], ["-15vh", "0vh"]);
-  const titleRotate = useTransform(smoothProgress, [0.15, 0.6], [-15, 0]);
-  const titleOpacity = useTransform(smoothProgress, [0.15, 0.5], [0, 1]);
-  const titleBlur = useTransform(smoothProgress, [0.15, 0.6], ["blur(16px)", "blur(0px)"]);
+  const titleX = useTransform(smoothProgress, [0.16, 0.40], ["-50px", "0px"]);
+  const titleY = useTransform(smoothProgress, [0.16, 0.40], ["-30px", "0px"]);
+  const titleRotate = useTransform(smoothProgress, [0.16, 0.40], [-6, 0]);
+  const titleOpacity = useTransform(smoothProgress, [0.16, 0.36], [0, 1]);
+  const titleBlur = useTransform(smoothProgress, [0.16, 0.40], ["blur(12px)", "blur(0px)"]);
 
-  const descX = useTransform(smoothProgress, [0.15, 0.6], ["-15vw", "0vw"]);
-  const descOpacity = useTransform(smoothProgress, [0.15, 0.5], [0, 1]);
+  const descX = useTransform(smoothProgress, [0.18, 0.42], ["-40px", "0px"]);
+  const descOpacity = useTransform(smoothProgress, [0.18, 0.38], [0, 1]);
 
-  const buttonsY = useTransform(smoothProgress, [0.15, 0.6], ["50px", "0px"]);
-  const buttonsOpacity = useTransform(smoothProgress, [0.15, 0.6], [0, 1]);
+  const buttonsY = useTransform(smoothProgress, [0.20, 0.44], ["30px", "0px"]);
+  const buttonsOpacity = useTransform(smoothProgress, [0.20, 0.42], [0, 1]);
 
   // Right Column (Image & Telemetry)
-  const cardX = useTransform(smoothProgress, [0.15, 0.6], ["30vw", "0vw"]);
-  const cardY = useTransform(smoothProgress, [0.15, 0.6], ["20vh", "0vh"]);
-  const cardRotate = useTransform(smoothProgress, [0.15, 0.6], [25, 0]);
-  const cardScale = useTransform(smoothProgress, [0.15, 0.6], [1.3, 1]);
-  const cardOpacity = useTransform(smoothProgress, [0.15, 0.5], [0, 1]);
-  const cardBlur = useTransform(smoothProgress, [0.15, 0.6], ["blur(24px)", "blur(0px)"]);
+  const cardX = useTransform(smoothProgress, [0.16, 0.42], ["60px", "0px"]);
+  const cardY = useTransform(smoothProgress, [0.16, 0.42], ["40px", "0px"]);
+  const cardRotate = useTransform(smoothProgress, [0.16, 0.42], [10, 0]);
+  const cardScale = useTransform(smoothProgress, [0.16, 0.42], [1.15, 1]);
+  const cardOpacity = useTransform(smoothProgress, [0.16, 0.38], [0, 1]);
+  const cardBlur = useTransform(smoothProgress, [0.16, 0.42], ["blur(16px)", "blur(0px)"]);
 
   // Ribbon
-  const ribbonY = useTransform(smoothProgress, [0.4, 0.8], ["100%", "0%"]);
-  const ribbonOpacity = useTransform(smoothProgress, [0.4, 0.8], [0, 1]);
+  const ribbonY = useTransform(smoothProgress, [0.25, 0.46], ["100%", "0%"]);
+  const ribbonOpacity = useTransform(smoothProgress, [0.25, 0.44], [0, 1]);
 
   // General elements
-  const bgOpacity = useTransform(smoothProgress, [0.15, 0.4], [0, 1]);
+  const bgOpacity = useTransform(smoothProgress, [0.14, 0.32], [0, 1]);
 
   return (
-    <div className="relative overflow-clip bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
+    <div className="relative bg-neutral-50 dark:bg-[#0a0a0a] text-neutral-900 dark:text-neutral-100 transition-colors duration-300">
 
       {/* ══════════════════════════════════════
           SECTION 1 — SHATTERED TO ASSEMBLED HERO
       ══════════════════════════════════════ */}
-      <section ref={containerRef} id="top" className="relative h-[250vh]">
+      <section ref={containerRef} id="top" className="relative h-[320vh]">
 
         {/* Sticky viewport container */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between pt-32 pb-16">
+        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between pt-28 pb-6 sm:pt-32 sm:pb-8">
 
           {/* ── THE SHATTERING TECH TREE (Phase 1) ── */}
           <motion.div

@@ -30,11 +30,10 @@ const offeringsData: OfferingCategory[] = [
     iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z",
     subcategories: [
-      { title: "Native Android Engineering", desc: "Kotlin, Jetpack Compose, Coroutines & 120fps UI", href: "/services/mobile" },
-      { title: "iOS Systems", desc: "SwiftUI, Combine & Native iOS Frameworks", href: "/services/mobile" },
-      { title: "Offline-First Local Sync", desc: "Room DB & SQLite caching for low-connectivity zones", href: "/services/mobile" },
-      { title: "IoT & Hardware Telematics", desc: "Bluetooth LE, Accelerometer & Live Sensor Streams", href: "/services/mobile" },
-      { title: "Cross-Platform Apps", desc: "Flutter & React Native for unified multi-platform apps", href: "/services/mobile" },
+      { title: "Flutter App Development", desc: "High-performance, beautiful UI for iOS & Android", href: "/services/mobile/flutter" },
+      { title: "Android App Development", desc: "Native Kotlin & Compose apps for maximum performance", href: "/services/mobile/android" },
+      { title: "iOS App Development", desc: "Native Swift & SwiftUI apps for the Apple ecosystem", href: "/services/mobile/ios" },
+      { title: "React Native App Development", desc: "Cross-platform solutions built with JavaScript", href: "/services/mobile/react-native" },
     ],
   },
   {
@@ -46,11 +45,13 @@ const offeringsData: OfferingCategory[] = [
     iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9",
     subcategories: [
-      { title: "Next.js & React Portals", desc: "Server Components, App Router & Sub-300ms SLA", href: "/services/web" },
-      { title: "High-Throughput APIs", desc: "Node.js, Go microservices & REST/GraphQL pipelines", href: "/services/web" },
-      { title: "Distributed Database Layer", desc: "PostgreSQL, Redis caching & zero-loss migrations", href: "/services/web" },
-      { title: "Role-Based SaaS Dashboards", desc: "Multi-tenant auth, role hierarchies & live analytics", href: "/services/web" },
-      { title: "Cloud & DevOps Architecture", desc: "Dockerized containers, Nginx reverse proxy & CI/CD", href: "/services/web" },
+      { title: "Java Development", desc: "Enterprise-grade scalable backend solutions", href: "/services/web/java" },
+      { title: "PHP Development", desc: "Dynamic and robust web applications", href: "/services/web/php" },
+      { title: "Python Development", desc: "AI-ready backends and data-driven applications", href: "/services/web/python" },
+      { title: "Angular Development", desc: "Structured, high-performance single page apps", href: "/services/web/angular" },
+      { title: "Vue Js Development", desc: "Progressive, flexible, and reactive web interfaces", href: "/services/web/vuejs" },
+      { title: "Node Js Development", desc: "Fast and scalable event-driven backend systems", href: "/services/web/nodejs" },
+      { title: "React Js Development", desc: "Interactive, component-based modern web UIs", href: "/services/web/reactjs" },
     ],
   },
   {
@@ -62,11 +63,10 @@ const offeringsData: OfferingCategory[] = [
     iconBg: "bg-white/5 text-white border border-white/10",
     icon: "M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z",
     subcategories: [
-      { title: "On-Device Edge Neural Networks", desc: "TensorFlow Lite & PyTorch Mobile inference with zero cloud cost", href: "/services/ai" },
-      { title: "Real-Time Computer Vision", desc: "CameraX, OpenCV face & object detection in under 40ms", href: "/services/ai" },
-      { title: "G-Force & Telematics Classification", desc: "Automated road crash & fatigue detection models", href: "/services/ai" },
-      { title: "Custom LLM & RAG Pipelines", desc: "Domain-tailored vector search & local retrieval agents", href: "/services/ai" },
-      { title: "Autonomous Edge Deployment", desc: "Models engineered to run offline on budget chipsets", href: "/services/ai" },
+      { title: "AI Consulting & Development", desc: "Strategic planning and custom AI model development", href: "/services/ai/consulting" },
+      { title: "Generative AI Development", desc: "Custom LLMs, text, image, and voice generation", href: "/services/ai/generative-ai" },
+      { title: "AI Agent Development", desc: "Autonomous AI agents to automate complex workflows", href: "/services/ai/ai-agents" },
+      { title: "AI Chatbot Development", desc: "Intelligent conversational bots and customer service AI", href: "/services/ai/chatbots" },
     ],
   },
   {
@@ -202,12 +202,15 @@ export default function Navbar() {
                           {offeringsData.map((item) => {
                             const isSelected = activeCategory === item.id;
                             return (
-                              <Link
+                              <button
                                 key={item.id}
-                                href={item.pageHref}
-                                onClick={() => setOfferingsOpen(false)}
+                                type="button"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  setActiveCategory(item.id);
+                                }}
                                 onMouseEnter={() => setActiveCategory(item.id)}
-                                className={`p-3.5 rounded-xl block transition-all duration-200 group ${isSelected ? "bg-white/[0.08] border border-white/[0.15] shadow-lg" : "hover:bg-white/[0.04] border border-transparent"}`}
+                                className={`w-full text-left p-3.5 rounded-xl block transition-all duration-200 group ${isSelected ? "bg-white/[0.08] border border-white/[0.15] shadow-lg" : "hover:bg-white/[0.04] border border-transparent"}`}
                               >
                                 <div className="flex items-center justify-between">
                                   <div className="flex items-center gap-3.5">
@@ -227,7 +230,7 @@ export default function Navbar() {
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
                                   </svg>
                                 </div>
-                              </Link>
+                              </button>
                             );
                           })}
                         </div>
