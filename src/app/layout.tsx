@@ -50,6 +50,20 @@ export const metadata: Metadata = {
   authors: [{ name: "Avensoft Technologies", url: siteUrl }],
   creator: "Avensoft Technologies",
   publisher: "Avensoft Technologies",
+  alternates: {
+    canonical: siteUrl,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -60,10 +74,12 @@ export const metadata: Metadata = {
       "Architecting mission-critical software systems across India — native Android applications, modern AI integrations, and sub-300ms cloud portals.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: `${siteUrl}/og-image.jpg`,
+        secureUrl: `${siteUrl}/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Avensoft Technologies",
+        type: "image/jpeg",
+        alt: "Avensoft Technologies — Software & Cloud Systems",
       },
     ],
   },
@@ -72,7 +88,7 @@ export const metadata: Metadata = {
     title: "Avensoft Technologies — Software & Cloud Systems",
     description:
       "Architecting mission-critical software systems across India — native Android applications, modern AI integrations, and cloud portals.",
-    images: ["/og-image.jpg"],
+    images: [`${siteUrl}/og-image.jpg`],
     creator: "@avensoft",
   },
   icons: {
