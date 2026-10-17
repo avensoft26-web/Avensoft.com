@@ -116,7 +116,7 @@ const jsonLd = {
     addressRegion: "Madhya Pradesh",
     addressCountry: "IN",
   },
-  sameAs: ["https://github.com/avensoft26-web"],
+  sameAs: ["https://github.com/avensoft26"],
 };
 
 export default function RootLayout({

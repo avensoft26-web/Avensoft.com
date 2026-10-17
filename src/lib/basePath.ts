@@ -2,7 +2,7 @@
  * Centralized Base Path Configuration for Avensoft.
  * 
  * CURRENT STATUS:
- * - Running on GitHub Pages: https://avensoft26-web.github.io/Avensoft.com/
+ * - Running on GitHub Pages: https://avensoft26.github.io/Avensoft.com/
  *   basePath is '/Avensoft.com'.
  * 
  * FUTURE UPGRADE (When you buy a custom domain like avensoft.com):
@@ -13,7 +13,7 @@ export const DEFAULT_BASE_PATH = "/Avensoft.com";
 
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
-  "https://avensoft26-web.github.io/Avensoft.com";
+  "https://avensoft26.github.io/Avensoft.com";
 
 const isDev = process.env.NODE_ENV === "development";
 
